@@ -13,6 +13,7 @@ apps=(
     iterm2
     kubernetes-cli
     slack
+    rancher
 )
 
 for app in "${apps[@]}"; do
