@@ -14,6 +14,7 @@ apps=(
     kubernetes-cli
     slack
     rancher
+    postman
 )
 
 for app in "${apps[@]}"; do
@@ -33,6 +34,7 @@ utils=(
     aws-iam-authenticator
     pipenv
     awscli
+    telnet
 )
 
 for util in "${utils[@]}"; do

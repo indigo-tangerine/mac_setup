@@ -2,9 +2,10 @@
 
 # CDK
 
-npm install -g typescript
-npm install aws-cdk-lib
-npm install -g aws-cdk
+npm install -g  \
+    typescript \
+    aws-cdk-lib \
+    aws-cdk
 npm install --save-dev jest
 
 code --install-extension AmazonWebServices.aws-toolkit-vscode
@@ -15,7 +16,10 @@ brew install \
     cloudformation-guard \
     yq \ 
     kubectl \
-    dotnet
+    dotnet \
+    oracle-jdk
 
 
 brew link cfn-lint
+
+pip3 install --upgrade "cookiecutter==1.7.2"

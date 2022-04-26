@@ -15,7 +15,7 @@ code --install-extension ms-vscode.powershell
 
 # YAML support
 code --install-extension redhat.vscode-yaml
-code --install-extension oderwat.indent-rainbow
+# code --install-extension oderwat.indent-rainbow
 code --install-extension sirtori.indenticator
 
 # MSSQL
@@ -35,6 +35,7 @@ code --install-extension dsteenman.cloudformation-yaml-snippets
 
 # Python
 code --install-extension ms-python.python
+code --install-extension pylint
 
 # Terraform
 code --install-extension hashicorp.terraform
@@ -42,6 +43,9 @@ code --install-extension betajob.modulestf
 code --install-extension erd0s.terraform-autocomplete
 code --install-extension sahmed.terraform-comments-beautifier
 code --install-extension run-at-scale.terraform-doc-snippets
+
+# JSON
+code --install-extension prettify-json
 
 echo "Finished installing VS Code extensions."
 
