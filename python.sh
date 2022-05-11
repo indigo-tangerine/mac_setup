@@ -7,10 +7,13 @@ brew install python3
 python3 -m pip3 install --upgrade setuptools
 python3 -m pip3 install --upgrade pip
 
-pip3 install virtualenv
-pip3 install pylint
-pip3 install cfn-lint
-# # pip3 install awscli
-# pip3 install aws-shell
-# pip3 install aws-sam-cli
-# pip3 install aws-xray-sdk
+packages=(
+    virtualenv
+    pylint
+    'cfn-lint'
+    autopep8
+)
+
+for app in "${apps[@]}"; do
+    pip3 install  $app
+done
