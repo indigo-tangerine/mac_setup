@@ -35,6 +35,7 @@ utils=(
     pipenv
     awscli
     telnet
+    yq
 )
 
 for util in "${utils[@]}"; do

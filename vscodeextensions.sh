@@ -47,5 +47,8 @@ code --install-extension run-at-scale.terraform-doc-snippets
 # JSON
 code --install-extension prettify-json
 
+# Language Prettifier
+code --install-extension esbenp.prettier-vscode
+
 echo "Finished installing VS Code extensions."
 

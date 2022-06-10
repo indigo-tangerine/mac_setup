@@ -122,7 +122,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 
 echo "Allow text selection in Quick Look"
 defaults write com.apple.finder QLEnableTextSelection -bool true
-
+killall Finder
 # Display full POSIX path as Finder window title
 #defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 

@@ -17,9 +17,11 @@ brew install \
     yq \ 
     kubectl \
     dotnet \
-    oracle-jdk
+    oracle-jdk \
+    yamllint
 
 
-brew link cfn-lint
+brew link --overwrite yq
+brew link --overwrite cfn-lint
 
 pip3 install --upgrade "cookiecutter==1.7.2"
