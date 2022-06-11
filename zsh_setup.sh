@@ -16,12 +16,45 @@ brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 brew install zsh-completions
 
-echo "Moving zsh config files to user root"
-# Get and use pre-configured .zshrc file
-sudo yes | cp -rf .zshrc ~/.zshrc
+# Configure zshrc and zshenv
 
-# Copy our aliases file to user root
-# sudo yes | cp -rf .zsh_aliases ~/.zsh_aliases
+echo "touch ~/.hushlogin" >> ~/.zshrc
+HOME_DIR=$(echo ~)
+echo "export ZSH=\"$HOME_DIR/.oh-my-zsh\"" >> ~/.zshrc
+
+echo "plugins=(git aws docker github)" >> ~/.zshrc
+echo "source $ZSH/oh-my-zsh.sh" >> ~/.zshrc
+
+echo "export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters" >> ~/.zshenv
+echo "source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+echo "source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"  >> ~/.zshrc
+echo "source /opt/homebrew/opt/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
+
+echo "if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi"  >> ~/.zshrc
+
+echo 'POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(aws)
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="black"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="135"
+POWERLEVEL9K_AWS_FOREGROUND="black"
+POWERLEVEL9K_AWS_BACKGROUND="166" # darkorange3a' >> ~/.zshrc
+
+echo "alias ls='ls -G'
+alias tfm='terraform'
+alias powershell='pwsh'
+alias pip='pip3'
+alias python='python3'
+" >> ~/.zshrc
+
+echo 'export PATH="/usr/local/opt/mysql-client/bin:$PATH' >> ~/.zshrc
+exho 'export PATH="$HOME/bin:/usr/local/bin:$PATH"' >> ~/.zshrc
 
 # reload .zshrc
 source ~/.zshrc

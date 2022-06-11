@@ -1,6 +1,9 @@
-#/!bin/bash
+#!/bin/bash
 
 brew update
+
+# required for powershell
+sudo softwareupdate --install-rosetta
 
 apps=(
     docker 
@@ -15,10 +18,15 @@ apps=(
     slack
     rancher
     postman
+    visual-studio-code
+    microsoft-remote-desktop
+    secure-pipes
+    spotify
+
 )
 
 for app in "${apps[@]}"; do
-    brew install --cask $app
+    brew install --cask "$app"
 done
 
 utils=(
@@ -26,7 +34,6 @@ utils=(
     coreutils
     git
     openssl
-    python3
     jq
     terraform
     tflint
@@ -36,9 +43,11 @@ utils=(
     awscli
     telnet
     yq
+    gcc
+    shellcheck
 )
 
 for util in "${utils[@]}"; do
-    brew install $util
+    brew install "$util"
 done
 

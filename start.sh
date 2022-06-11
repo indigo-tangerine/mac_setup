@@ -4,9 +4,12 @@ chmod +x ./*.sh
 
 # install brew & pre-reqs
 
-xcode-select --install
+sudo rm -rf /Library/Developer/CommandLineTools
+sudo xcode-select --install
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/rupertbroad/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # install python3 pip3
 source ./python.sh

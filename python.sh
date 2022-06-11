@@ -4,8 +4,9 @@ echo "Installing python packages"
 
 brew install python3
 
-python3 -m pip3 install --upgrade setuptools
-python3 -m pip3 install --upgrade pip
+python3 -m pip install --upgrade setuptools
+python3 -m pip install --upgrade pip
+
 
 packages=(
     virtualenv
@@ -14,6 +15,6 @@ packages=(
     autopep8
 )
 
-for app in "${apps[@]}"; do
-    pip3 install  $app
+for app in "${packages[@]}"; do
+    pip install  $app
 done
