@@ -17,7 +17,9 @@ brew install cloudformation-guard \
     kubectl \
     dotnet \
     oracle-jdk \
-    yamllint
+    yamllint \
+    chef-workstation \
+    saml2aws
 
 
 brew link --overwrite yq
