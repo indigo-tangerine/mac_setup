@@ -13,6 +13,13 @@ packages=(
     pylint
     'cfn-lint'
     autopep8
+    semversioner
+    structlog
+    boto3
+    botocore
+    urllib3
+    cfn-lint
+    
 )
 
 for app in "${packages[@]}"; do

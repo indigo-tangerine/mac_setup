@@ -35,6 +35,7 @@ code --install-extension dsteenman.cloudformation-yaml-snippets
 
 # Python
 code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
 code --install-extension pylint
 
 # Terraform
@@ -45,10 +46,17 @@ code --install-extension sahmed.terraform-comments-beautifier
 code --install-extension run-at-scale.terraform-doc-snippets
 
 # JSON
-code --install-extension prettify-json
+code --install-extension mohsen1.prettify-json
 
 # Language Prettifier
 code --install-extension esbenp.prettier-vscode
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension rvest.vs-code-prettier-eslint
+
+# Git
+code --install-extension eamodio.gitlens
+code --install-extension github.copilot
+code --install-extension gitlab.gitlab-workflow
 
 echo "Finished installing VS Code extensions."
 

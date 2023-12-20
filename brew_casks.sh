@@ -19,7 +19,6 @@ apps=(
     visual-studio-code
     microsoft-remote-desktop
     secure-pipes
-    spotify
     atom
 )
 
